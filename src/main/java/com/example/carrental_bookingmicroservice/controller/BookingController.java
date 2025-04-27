@@ -49,4 +49,14 @@ public class BookingController {
 
         return booking;
     }
+
+    @GetMapping("/bookings/{userId}")
+    public Optional<List<Booking>> getBookingsForUser(@PathVariable String userId) {
+        return bookingService.findByUserIdAndActive(userId, true);
+    }
+
+    @GetMapping("/history/{userId}")
+    public Optional<List<Booking>> getBookingsHistoryForUser(@PathVariable String userId) {
+        return bookingService.findByUserIdAndActive(userId, false);
+    }
 }
