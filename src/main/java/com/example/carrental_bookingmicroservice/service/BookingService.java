@@ -25,12 +25,12 @@ public class BookingService {
         long days = ChronoUnit.DAYS.between(startDate, endDate); //Todo mb add + 1
         //double totalCost = car.getPricePerDayUsd() * days; //Todo think about getting pricePerCar somehow
 
-        return bookingRepository.save(new Booking(
+        /*return bookingRepository.save(new Booking(
                 bookingRequest.getUserId(),
                 bookingRequest.getCarId(),
                 bookingRequest.getStartDate(),
                 bookingRequest.getEndDate()
-        ));
+        ));*/ return null;
     }
 
     public Optional<Booking> findById(String id) {

@@ -11,17 +11,17 @@ public class Booking {
     private String carId;
     private String startDate;
     private String endDate;
-    //private double totalCostUsd;
+    private double totalCostUsd;
     private boolean active = true;
 
     public Booking() {}
 
-    public Booking(String userId, String carId, String startDate, String endDate/*, double totalCostUsd*/) {
+    public Booking(String userId, String carId, String startDate, String endDate, double totalCostUsd) {
         this.userId = userId;
         this.carId = carId;
         this.startDate = startDate;
         this.endDate = endDate;
-        //this.totalCostUsd = totalCostUsd;
+        this.totalCostUsd = totalCostUsd;
     }
 
     public String getCarId() {
@@ -64,13 +64,13 @@ public class Booking {
         this.startDate = startDate;
     }
 
-    /*public double getTotalCostUsd() {
+    public double getTotalCostUsd() {
         return totalCostUsd;
     }
 
     public void setTotalCostUsd(double totalCostUsd) {
         this.totalCostUsd = totalCostUsd;
-    }*/
+    }
 
     public String getUserId() {
         return userId;
